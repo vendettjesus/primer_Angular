@@ -1,0 +1,21 @@
+
+<p class="clones-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, vitae praesentium qui consequuntur aspernatur consectetur tempora, error dolorem cupiditate suscipit esse nesciunt? Quisquam, ab blanditiis? Ipsum nobis consectetur sunt veritatis!</p>
+<h2 class="subheader">Lista de películas</h2>
+<hr>
+<div id="articles"*ngIf="peliculas" class="cartelera">
+    <article class="article-item" id="article-template" *ngFor="let peli of peliculas">
+        <div class="image-wrap rounded hover-zoom bg-image">
+            <img class="" src="{{ peli.image }}" alt="logo orden jedi" />
+        </div>
+
+        <h2>{{peli.title}}</h2>
+        <span class="date">
+            {{peli.year}}
+        </span>
+        <a href="#">Leer más</a>
+
+        <div class="clearfix"></div>
+    </article>
+
+    <!--AÑADIR ARTICULOS VIA JS-->
+</div>

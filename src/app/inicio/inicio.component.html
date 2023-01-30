@@ -1,0 +1,43 @@
+<div class="center">
+    <section id="content">
+      <h2 class="subheader">Ultimas noticias</h2>
+      
+      <script type="text/javascript">
+        window.addEventListener("load", function(){
+          var template = documnet.getElementById("article-template");
+          var articles = document.getElementById("articles");
+  
+          for(var i = 1; i<+ 5; i++){
+            var clonado = template.cloneNode(true);
+            clonado.removeAttribute("id");
+  
+            var h2 = clonado.getElementsByTagName("h2")[0];
+                    h2.innerHTML = h2.textContent + ' ' + i;
+   
+                    articles.appendChild(clonado);
+                }
+   
+            });
+        </script>
+   
+        <!--Listado articulos-->
+        <div id="articles">
+            <article class="article-item" id="article-template">
+                <div class="image-wrap rounded hover-zoom bg-image">
+                    <img class="" src="/assets/images/jedi-order-mini.jpg" alt="logo orden jedi" />
+                </div>
+   
+                <h2>Artículo de prueba</h2>
+                <span class="date">
+                    Hace 5 minutos
+                </span>
+                <a href="#">Leer más</a>
+   
+                <div class="clearfix"></div>
+            </article>
+   
+            <!--AÑADIR ARTICULOS VIA JS-->
+        </div>
+    </section>
+    <app-slidebar></app-slidebar>
+  </div>
